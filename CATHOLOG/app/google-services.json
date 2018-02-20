@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "200888523631",
+    "firebase_url": "https://catholog-9895f.firebaseio.com",
+    "project_id": "catholog-9895f",
+    "storage_bucket": "catholog-9895f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200888523631:android:2cfa8a8cc270feb0",
+        "android_client_info": {
+          "package_name": "com.lamy.mathilde.catholog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200888523631-0h81vilatjkoaq7ri6r9mqs201o9rv03.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lamy.mathilde.catholog",
+            "certificate_hash": "b514d1ebe688160c8c485ecfbbd80638fb706e67"
+          }
+        },
+        {
+          "client_id": "200888523631-oc2o08nb14hkamrk01iicov8pitnjg0a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDConKwwDs-Ytzt8ktuT9lnj8BhzWGnzns"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200888523631-oc2o08nb14hkamrk01iicov8pitnjg0a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -11,9 +11,11 @@ import android.widget.TextView;
 import java.util.List;
 
 
-public class ListAdapterNews extends ArrayAdapter<String> {
+public class ListAdapterNews {
+    //extends ArrayAdapter<Event>
 
-    private final Activity context;
+
+   /* private final Activity context;
     private final String[] eventName ;
     private final String[] eventPlace ;
     private final String[] eventDate ;
@@ -24,8 +26,8 @@ public class ListAdapterNews extends ArrayAdapter<String> {
         this.eventName=eventName;
         this.eventPlace=eventPlace;
         this.eventDate=eventDate;
-
     }
+
     public View getView(int position, View vieuw, ViewGroup parent) {
         LayoutInflater layoutInflater = context.getLayoutInflater();
         View rowView = layoutInflater.inflate(R.layout.list, null,true);
@@ -40,5 +42,5 @@ public class ListAdapterNews extends ArrayAdapter<String> {
         dateListe.setText(eventDate[position]);
         return rowView;
     }
-
+*/
 }

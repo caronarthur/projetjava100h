@@ -14,8 +14,8 @@
         android:layout_alignStart="@+id/editTextPassword"
         android:layout_marginBottom="51dp"
         android:ems="10"
+        android:hint="Mail étudiant"
         android:inputType="textPersonName"
-        android:text="Mail étudiant"
         android:visibility="visible"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="156dp" />
@@ -40,8 +40,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="65dp"
         android:ems="10"
-        android:inputType="textPassword"
-        android:text="Mot de passe" />
+        android:hint="Mot de passe"
+        android:inputType="textPassword" />
 
     <ProgressBar
         android:id="@+id/progressBar"

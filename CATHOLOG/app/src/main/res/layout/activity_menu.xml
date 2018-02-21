@@ -6,34 +6,52 @@
     android:layout_height="match_parent"
     tools:context="com.lamy.mathilde.catholog.MenuActivity">
 
-    <Button
-        android:id="@+id/buttonPlan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Plan"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="124dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/buttonCalendrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calendrier"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="231dp"
-        android:layout_below="@+id/buttonNews"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="51dp" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MENU"
+            android:textAlignment="center"
+            android:textSize="70sp" />
 
-    <Button
-        android:id="@+id/buttonNews"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="News"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="308dp"
-        android:layout_below="@+id/buttonPlan"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="37dp" />
+        <Button
+            android:id="@+id/buttonNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/buttonPlan"
+            android:layout_marginTop="80dp"
+            android:text="News"
+            tools:layout_editor_absoluteX="216dp"
+            tools:layout_editor_absoluteY="308dp" />
+
+        <Button
+            android:id="@+id/buttonPlan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:text="Plan"
+            tools:layout_editor_absoluteX="216dp"
+            tools:layout_editor_absoluteY="124dp" />
+
+        <Button
+            android:id="@+id/buttonCalendrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/buttonNews"
+            android:layout_marginTop="60dp"
+            android:text="Calendrier"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="231dp" />
+
+    </LinearLayout>
 
 </RelativeLayout>

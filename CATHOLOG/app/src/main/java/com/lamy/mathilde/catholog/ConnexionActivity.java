@@ -22,10 +22,9 @@ public class ConnexionActivity extends AppCompatActivity {
 
     private EditText edtMail;
     private EditText edtPassword;
-    private EditText edtConfirmation;
     private Button btnConnexion;
     private FirebaseAuth auth;
-    private ProgressBar progressBar;
+   // private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +43,7 @@ public class ConnexionActivity extends AppCompatActivity {
         edtMail = (EditText) findViewById(R.id.editTextMail);
         edtPassword = (EditText) findViewById(R.id.editTextPassword);
         btnConnexion = (Button) findViewById(R.id.buttonConnexion);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        // progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
 
         final String mail = edtMail.getText().toString();
@@ -67,7 +66,7 @@ public class ConnexionActivity extends AppCompatActivity {
                     return;
                 }
 
-                progressBar.setVisibility(View.VISIBLE);
+               // progressBar.setVisibility(View.VISIBLE);
 
 
 
@@ -76,16 +75,16 @@ public class ConnexionActivity extends AppCompatActivity {
                         .addOnCompleteListener(ConnexionActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                progressBar.setVisibility(View.GONE);
+                              //  progressBar.setVisibility(View.GONE);
                                 if (!task.isSuccessful()) {
-                                    // there was an error
+                                    // S'il y a une erreur
                                     if (password.length() < 6) {
                                         edtPassword.setError(getString(R.string.minimum_password));
                                     } else {
                                         Toast.makeText(ConnexionActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
                                     }
                                 } else {
-                                    Intent intent = new Intent(ConnexionActivity.this, MapsActivity.class);
+                                    Intent intent = new Intent(ConnexionActivity.this, MenuActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }

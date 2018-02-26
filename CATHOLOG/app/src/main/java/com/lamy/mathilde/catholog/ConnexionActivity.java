@@ -31,55 +31,44 @@ public class ConnexionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Get Firebase auth instance
-        auth = FirebaseAuth.getInstance();
-
-        if (auth.getCurrentUser() != null) {
-            startActivity(new Intent(ConnexionActivity.this, MenuActivity.class));
-            finish();
-        }
-
-
         edtMail = (EditText) findViewById(R.id.editTextMail);
         edtPassword = (EditText) findViewById(R.id.editTextPassword);
         btnConnexion = (Button) findViewById(R.id.buttonConnexion);
 
+        //Get Firebase auth instance
+        auth = FirebaseAuth.getInstance();
 
-        final String mail = edtMail.getText().toString();
-        final String password = edtPassword.getText().toString();
+
+       /* if (auth.getCurrentUser() != null) {
+            startActivity(new Intent(ConnexionActivity.this, MenuActivity.class));
+            finish();} */
 
 
         btnConnexion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String mail = edtMail.getText().toString();
+                final String mail = edtMail.getText().toString();
                 final String password = edtPassword.getText().toString();
 
                 if (TextUtils.isEmpty(mail)) {
-                    Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+                    Toast.makeText(getApplicationContext(), "Veuillez entrer votre adresse mail", Toast.LENGTH_SHORT).show();
+                    return;}
 
                 if (TextUtils.isEmpty(password)) {
-                    Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Veuillez entrer votre mot de passe", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-
-
-
-                //authenticate user
-                auth.signInWithEmailAndPassword(mail, password)
-                        .addOnCompleteListener(ConnexionActivity.this, new OnCompleteListener<AuthResult>() {
+                auth.signInWithEmailAndPassword(mail, password).addOnCompleteListener(ConnexionActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (!task.isSuccessful()) {
                                     // S'il y a une erreur
-                                    if (password.length() < 6) {
+                                   /* if (password.length() < 6) {
                                         edtPassword.setError(getString(R.string.minimum_password));
-                                    } else {
+                                    } else { */
                                         Toast.makeText(ConnexionActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
-                                    }
+
                                 } else {
                                     Intent intent = new Intent(ConnexionActivity.this, MenuActivity.class);
                                     startActivity(intent);

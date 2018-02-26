@@ -43,7 +43,6 @@ public class ConnexionActivity extends AppCompatActivity {
         edtMail = (EditText) findViewById(R.id.editTextMail);
         edtPassword = (EditText) findViewById(R.id.editTextPassword);
         btnConnexion = (Button) findViewById(R.id.buttonConnexion);
-        // progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
 
         final String mail = edtMail.getText().toString();
@@ -66,7 +65,6 @@ public class ConnexionActivity extends AppCompatActivity {
                     return;
                 }
 
-               // progressBar.setVisibility(View.VISIBLE);
 
 
 
@@ -75,7 +73,6 @@ public class ConnexionActivity extends AppCompatActivity {
                         .addOnCompleteListener(ConnexionActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                              //  progressBar.setVisibility(View.GONE);
                                 if (!task.isSuccessful()) {
                                     // S'il y a une erreur
                                     if (password.length() < 6) {

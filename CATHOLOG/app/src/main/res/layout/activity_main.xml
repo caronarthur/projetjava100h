@@ -43,14 +43,6 @@
         android:hint="Mot de passe"
         android:inputType="textPassword" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="53dp" />
 
 </RelativeLayout>
 

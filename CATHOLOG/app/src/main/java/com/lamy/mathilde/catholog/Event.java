@@ -1,8 +1,12 @@
 package com.lamy.mathilde.catholog;
 
+import com.google.firebase.database.Exclude;
+
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Mathilde on 21/02/2018.
@@ -68,7 +72,29 @@ public class Event {
         this.visible=visible;
     }
 
+    @Override
+    public String toString() {
+        return "Event{" +
+                "name='" + nameEvent + '\'' +
+                ", id='" + idEvent + '\'' +
+                ", dateStart=" + dateStart +
+                ", dateEnd=" + dateEnd +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                '}';
+    }
+
+    @Exclude
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("name", nameEvent);
+        result.put("id", idEvent);
+        result.put("dateStart", dateStart);
+        result.put("dateEnd", dateEnd);
+        result.put("latitude", latitude);
+        result.put("longitude", longitude);
+
+        return result;
 
 
-
-}
+    }}

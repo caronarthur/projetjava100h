@@ -1,5 +1,7 @@
 package com.lamy.mathilde.catholog;
 
+import java.sql.Time;
+import java.sql.Timestamp;
 import java.util.Date;
 
 /**
@@ -10,25 +12,25 @@ public class Event {
 
     /* attributs de la classe Event */
     private int idEvent ;
-    private Date dateStart ;
-    private Date dateEnd ;
+    private Timestamp dateStart ;
+    private Timestamp dateEnd ;
     private int prix ;
     private int nbParticip ;
-    private String name ;
+    private String nameEvent ;
     private double latitude ;
     private double longitude ;
     private boolean visible ;
     private boolean prive ;
 
     /* getter() et setter() de chaque attribut de la classe Event */
+    public Timestamp getDateStart() {return dateStart;}
+    public void setDateStart(Timestamp dateStart) {this.dateStart = dateStart;}
+
+    public Timestamp getDateEnd() {return dateEnd;}
+    public void setDateEnd(Timestamp dateEnd) {this.dateEnd = dateEnd;}
+
     public int getIdEvent() {return idEvent;}
     public void setIdEvent(int idEvent) {this.idEvent = idEvent;}
-
-    public Date getDateStart() {return dateStart;}
-    public void setDateStart(Date dateStart) {this.dateStart = dateStart;}
-
-    public Date getDateEnd() {return dateEnd;}
-    public void setDateEnd(Date dateEnd) {this.dateEnd = dateEnd;}
 
     public int getPrix() {return prix;}
     public void setPrix(int prix) {this.prix = prix;}
@@ -36,8 +38,8 @@ public class Event {
     public int getNbParticip() {return nbParticip;}
     public void setNbParticip(int nbParticip) {this.nbParticip = nbParticip;}
 
-    public String getName() {return name;}
-    public void setName(String name) {this.name = name;}
+    public String getNameEvent() {return nameEvent;}
+    public void setNameEvent(String nameEvent) {this.nameEvent = nameEvent;}
 
     public double getLatitude() {return latitude;}
     public void setLatitude(double latitude) {this.latitude = latitude;}
@@ -53,12 +55,13 @@ public class Event {
     public void setVisible(boolean visible) {this.visible = visible;}
 
     /* constructeur de la classe Event */
-    public Event(Date dateStart,Date dateEnd,int prix,int nbParticip,String name,double latitude,double longitude,boolean prive,boolean visible) {
+    public Event(int idEvent,Timestamp dateStart,Timestamp dateEnd,int prix,int nbParticip,String nameEvent,double latitude,double longitude,boolean prive,boolean visible) {
+        this.idEvent=idEvent;
         this.dateEnd=dateEnd;
         this.dateStart=dateStart;
         this.prix=prix;
         this.nbParticip=nbParticip;
-        this.name=name;
+        this.nameEvent=nameEvent;
         this.latitude=latitude;
         this.longitude=longitude;
         this.prive=prive;

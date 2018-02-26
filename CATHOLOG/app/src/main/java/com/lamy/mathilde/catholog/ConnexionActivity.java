@@ -36,7 +36,7 @@ public class ConnexionActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         if (auth.getCurrentUser() != null) {
-            startActivity(new Intent(ConnexionActivity.this, MapsActivity.class));
+            startActivity(new Intent(ConnexionActivity.this, MenuActivity.class));
             finish();
         }
 
@@ -49,12 +49,6 @@ public class ConnexionActivity extends AppCompatActivity {
 
         final String mail = edtMail.getText().toString();
         final String password = edtPassword.getText().toString();
-         /* if (mail.equals("mathilde.lamy@hei.yncrea.fr")==true) {
-            edtPassword.setVisibility(View.VISIBLE);
-            if (password.equals("mathilde")==true){
-                    btnConnexion.setVisibility(View.VISIBLE);
-                        }
-                    } */
 
 
         btnConnexion.setOnClickListener(new View.OnClickListener() {
@@ -72,14 +66,6 @@ public class ConnexionActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                /*@Override
-                public void onClick(View view) {
-                    if (mail.equals("jean.bon") == true && password.equals("jean") == true) {
-                        Intent intent = new Intent(ConnexionActivity.this, MenuActivity.class);
-                        intent.putExtra("cleNom", "Bonjour " + mail);
-                        startActivityForResult(intent, 1);
-                    }
-                }*/
 
                 progressBar.setVisibility(View.VISIBLE);
 

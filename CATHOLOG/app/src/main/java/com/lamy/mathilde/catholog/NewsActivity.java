@@ -1,26 +1,52 @@
 package com.lamy.mathilde.catholog;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import java.util.ArrayList;
 
 import static android.R.layout.activity_list_item;
 
 public class NewsActivity extends AppCompatActivity {
 
-    private ListView listEvent ;
-    private String[] events = new String[]{"afterwork","concours","concert"} ;
+    /* private ArrayList<Event> upcomingEventList = new ArrayList<>();
+    private ListView upcomingEvents;
+    private Adapter upcomingEventsAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
-        listEvent = (ListView) findViewById(R.id.listViewEvent);
-        //ListAdapterNews adapter = new ListAdapterNews(this,eventName,eventPlace,eventDate) ;
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(NewsActivity.this,
-                android.R.layout.simple_list_item_1 , events );
-        listEvent.setAdapter(adapter);
-    }
+        upcomingEvents = (ListView) findViewById(R.id.upcoming_events);
+        // On crée l'adapter par rapport aux données présentes dans la liste
+        upcomingEventsAdapter = new ListAdapterNews(this, upcomingEventList);
+        // On attache l'adapter
+        upcomingEvents.setAdapter(upcomingEventsAdapter);
+        // On crée enfin la méthode qui va détecter le clic sur un item en particulier
+        upcomingEvents.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent eventPreview = new Intent(MenuActivity.this, NewsActivity.class);
+                eventPreview.putExtra("idEvent",upcomingEventList.get(i).getIdEvent());
+                eventPreview.putExtra("eventName", upcomingEventList.get(i).getNameEvent());
+                eventPreview.putExtra("dateStart", upcomingEventList.get(i).getDateStart());
+                eventPreview.putExtra("dateEnd", upcomingEventList.get(i).getDateEnd());
+                eventPreview.putExtra("latitude", upcomingEventList.get(i).getLatitude());
+                eventPreview.putExtra("longitude", upcomingEventList.get(i).getLongitude());
+                eventPreview.putExtra("prix",upcomingEventList.get(i).getPrix()) ;
+                eventPreview.putExtra("nbParticip",upcomingEventList.get(i).getNbParticip()) ;
+                startActivity(eventPreview);
+            }
+        });
+        //prepareEventsDatas();
+
+    } */
 }

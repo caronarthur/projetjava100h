@@ -110,7 +110,7 @@
         android:layout_alignEnd="@+id/buttonDeconnexion" />
 
     <ToggleButton
-        android:id="@+id/ButtonOnOffGeo"
+        android:id="@+id/buttonOnOffGeo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"

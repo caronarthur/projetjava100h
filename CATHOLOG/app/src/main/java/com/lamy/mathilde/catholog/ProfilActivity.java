@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.ToggleButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +20,10 @@ public class ProfilActivity extends AppCompatActivity {
 
     // private Spinner spinnerPages ;
     private Button btnDeconnexion ;
-    private Button btnActivation ;
     private ImageButton btnModif ;
     private ImageButton btnMenu ;
     private Button btnOldEvents ;
+    private ToggleButton btnActivGeoloc ;
 
 
     @Override
@@ -33,7 +34,7 @@ public class ProfilActivity extends AppCompatActivity {
         btnOldEvents = (Button) findViewById(R.id.buttonEventPasse) ;
         btnMenu = (ImageButton) findViewById(R.id.imageButtonMenu);
         btnModif = (ImageButton) findViewById(R.id.imageButtonModify);
-        btnActivation = (Button) findViewById(R.id.buttonActivationGeoloc);
+        btnActivGeoloc = (ToggleButton) findViewById(R.id.buttonOnOffGeo);
         btnDeconnexion = (Button) findViewById(R.id.buttonDeconnexion);
 
 

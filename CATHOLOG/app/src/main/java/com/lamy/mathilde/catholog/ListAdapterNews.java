@@ -12,23 +12,14 @@ import java.util.List;
 
 
 public class ListAdapterNews {
-    //extends ArrayAdapter<Event>
 
 
-   /* private final Activity context;
-    private final String[] eventName ;
-    private final String[] eventPlace ;
-    private final String[] eventDate ;
 
-    public ListAdapterNews(Activity context, String[] eventName, String[] eventPlace, String[] eventDate) {
-        super(context, R.layout.list,eventName);
-        this.context=context ;
-        this.eventName=eventName;
-        this.eventPlace=eventPlace;
-        this.eventDate=eventDate;
+    public ListAdapterNews() {
+
     }
 
-    public View getView(int position, View vieuw, ViewGroup parent) {
+  /*  public View getView(int position, View vieuw, ViewGroup parent) {
         LayoutInflater layoutInflater = context.getLayoutInflater();
         View rowView = layoutInflater.inflate(R.layout.list, null,true);
 

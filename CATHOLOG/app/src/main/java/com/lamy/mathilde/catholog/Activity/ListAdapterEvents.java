@@ -1,17 +1,17 @@
-package com.lamy.mathilde.catholog;
+package com.lamy.mathilde.catholog.Activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.lamy.mathilde.catholog.Class.Event;
+import com.lamy.mathilde.catholog.R;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 
 

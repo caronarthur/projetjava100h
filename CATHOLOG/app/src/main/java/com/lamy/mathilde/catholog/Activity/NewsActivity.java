@@ -1,4 +1,4 @@
-package com.lamy.mathilde.catholog;
+package com.lamy.mathilde.catholog.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,9 @@ import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+
+import com.lamy.mathilde.catholog.Class.Event;
+import com.lamy.mathilde.catholog.R;
 
 import java.util.ArrayList;
 

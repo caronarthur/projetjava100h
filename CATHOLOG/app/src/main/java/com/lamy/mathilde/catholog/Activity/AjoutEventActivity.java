@@ -1,7 +1,9 @@
-package com.lamy.mathilde.catholog;
+package com.lamy.mathilde.catholog.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.lamy.mathilde.catholog.R;
 
 public class AjoutEventActivity extends AppCompatActivity {
 

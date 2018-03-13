@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lamy.mathilde.catholog.MenuActivity">
+    tools:context="com.lamy.mathilde.catholog.Activity.MenuActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,6 +51,17 @@
             android:text="Calendrier"
             tools:layout_editor_absoluteX="61dp"
             tools:layout_editor_absoluteY="231dp" />
+
+        <Button
+            android:id="@+id/buttonProfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/buttonProfil"
+            android:layout_marginTop="40dp"
+            android:text="Profil"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="400dp" />
 
     </LinearLayout>
 

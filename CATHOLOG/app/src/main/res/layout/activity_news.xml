@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lamy.mathilde.catholog.NewsActivity">
+    tools:context="com.lamy.mathilde.catholog.Activity.NewsActivity">
 
     <ListView
         android:id="@+id/upcoming_events"

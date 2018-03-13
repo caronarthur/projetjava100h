@@ -1,4 +1,4 @@
-package com.lamy.mathilde.catholog;
+package com.lamy.mathilde.catholog.Class;
 
 import com.google.firebase.database.Exclude;
 

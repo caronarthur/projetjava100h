@@ -1,4 +1,4 @@
-package com.lamy.mathilde.catholog;
+package com.lamy.mathilde.catholog.Activity;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -8,15 +8,13 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.FirebaseDatabase;
+import com.lamy.mathilde.catholog.R;
 
 public class ConnexionActivity extends AppCompatActivity {
 
@@ -24,7 +22,7 @@ public class ConnexionActivity extends AppCompatActivity {
     private EditText edtPassword;
     private Button btnConnexion;
     private FirebaseAuth auth;
-   // private ProgressBar progressBar;
+    private Button btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,14 +32,19 @@ public class ConnexionActivity extends AppCompatActivity {
         edtMail = (EditText) findViewById(R.id.editTextMail);
         edtPassword = (EditText) findViewById(R.id.editTextPassword);
         btnConnexion = (Button) findViewById(R.id.buttonConnexion);
+        btnRegister = (Button) findViewById(R.id.create_account);
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
 
 
-       /* if (auth.getCurrentUser() != null) {
-            startActivity(new Intent(ConnexionActivity.this, MenuActivity.class));
-            finish();} */
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ConnexionActivity.this,RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         btnConnexion.setOnClickListener(new View.OnClickListener() {

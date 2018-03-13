@@ -1,4 +1,4 @@
-package com.lamy.mathilde.catholog;
+package com.lamy.mathilde.catholog.Class;
 
 /**
  * Created by Mathilde on 21/02/2018.

@@ -60,6 +60,15 @@ public class ProfilActivity extends AppCompatActivity {
            }
        });
 
+       btnDeconnexion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut()
+                Intent intent = new Intent(ProfilActivity.this, ConnexionActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
     }
